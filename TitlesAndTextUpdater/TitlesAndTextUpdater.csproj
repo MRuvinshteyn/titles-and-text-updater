@@ -47,7 +47,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntryPoint.cs" />
+    <Compile Include="GUI\TextParametersPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\TextParametersPrompt.Designer.cs">
+      <DependentUpon>TextParametersPrompt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GUI\TextParametersPrompt.resx">
+      <DependentUpon>TextParametersPrompt.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,5 +1,7 @@
-﻿using System.Windows.Forms;
+﻿using System.Collections.Generic;
+using System.Windows.Forms;
 using ScriptPortal.Vegas;
+using TitlesAndTextUpdater.GUI;
 
 namespace TitlesAndTextUpdater
 {
@@ -19,11 +21,8 @@ namespace TitlesAndTextUpdater
                         {
                             OFXEffect ofx = effect.OFXEffect;
 
-                            MessageBox.Show(ofx.Parameters.Count.ToString() + " parameters");
-                            foreach (OFXParameter parameter in ofx.Parameters)
-                            {
-                                MessageBox.Show(parameter.Name);
-                            }
+                            TextParametersPrompt prompt = new TextParametersPrompt(ofx.Parameters);
+                            prompt.Show();
                         }
                     }
                 }
